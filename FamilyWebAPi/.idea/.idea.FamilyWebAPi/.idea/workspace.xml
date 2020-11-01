@@ -14,15 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c205489-112a-477c-898e-567111962a98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Child.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/ChildInterest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Interest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/LengthAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Pet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +39,7 @@
         <option value="$PROJECT_DIR$/FamilyWebAPi/Data/IUserService.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Data/InMemoryUserService.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Properties/launchSettings.json" />
       </list>
     </option>
   </component>
@@ -98,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604261001309</updated>
-      <workItem from="1604261010823" duration="4078000" />
+      <workItem from="1604261010823" duration="6310000" />
     </task>
     <servers />
   </component>
@@ -120,5 +116,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1604269117367">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1604269117367" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1604269117367">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1604269117367" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1604269117367">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1604269117367" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1604269117367">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1604269117367" />
   </component>
 </project>

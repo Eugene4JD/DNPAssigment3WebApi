@@ -19,6 +19,7 @@
           <e p="InMemoryUserService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
         </e>
+        <e p="families.json" t="Include" />
         <e p="FamilyWebAPi.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Adult.cs" t="Include" />
