@@ -11,7 +11,6 @@
         <e p="Controllers" t="Include">
           <e p="FamilyController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="FamilyService.cs" t="Include" />
@@ -44,7 +43,6 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="FamilyWebAPi.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
