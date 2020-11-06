@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace DNPAssigment1.Data
 
         public FamilyService()
         {
+            families = new List<Family>();
             if (!File.Exists(familyFile))
             {
                 //Seed();
@@ -27,6 +29,11 @@ namespace DNPAssigment1.Data
                 string content = File.ReadAllText(familyFile);
                 families = JsonSerializer.Deserialize <List<Family>>(content);
             }
+            Family family = new Family();
+            family.StreetName = "sdf";
+            family.HouseNumber = 12;
+            families.Add(family);
+            WriteFamiliesToFile();
         }
         
         public async Task<IList<Family>> GetFamiliesAsync()
@@ -37,6 +44,7 @@ namespace DNPAssigment1.Data
         public async Task<Family> AddFamilyAsync(Family family)
         {
             int max = families.Max(family => family.Id);
+            Console.WriteLine("Here is ok");
             family.Id = (++max);
             families.Add(family);
             WriteFamiliesToFile();
