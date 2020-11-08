@@ -24,7 +24,7 @@ namespace FamilyWebAPi.Controllers
         [HttpGet]
         public async Task<ActionResult<IList<Family>>> GetFamilies()
         {
-            Console.WriteLine("http get ");
+            //Console.WriteLine("http get ");
             try
             {
                 IList<Family> families = await _familyService.GetFamiliesAsync();
@@ -61,14 +61,15 @@ namespace FamilyWebAPi.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpPatch]
         [Route("{id:int}")]
-        public async Task<ActionResult> DeleteFamily([FromRoute] int id)
+        public async Task<ActionResult<Family>> UpdateFamily([FromBody] Family family)
         {
             try
             {
-                await _familyService.RemoveFamilyAsync(id);
-                return Ok();
+                Console.WriteLine(family);
+                Family updatedFamily = await _familyService.UpdateFamilyAsync(family);
+                return Ok(updatedFamily);
             }
             catch (Exception e)
             {
@@ -77,14 +78,14 @@ namespace FamilyWebAPi.Controllers
             }
         }
 
-
-        [HttpPatch]
-        public async Task<ActionResult<Family>> UpdateFamily([FromBody] Family family)
+        [HttpDelete]
+        [Route("{id:int}")]
+        public async Task<ActionResult> DeleteFamily([FromRoute] int id)
         {
             try
             {
-                Family updatedFamily = await _familyService.UpdateFamilyAsync(family);
-                return Ok(updatedFamily);
+                await _familyService.RemoveFamilyAsync(id);
+                return Ok();
             }
             catch (Exception e)
             {
