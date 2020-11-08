@@ -79,7 +79,6 @@ namespace FamilyWebAPi.Controllers
 
 
         [HttpPatch]
-        [Route("{id:int}")]
         public async Task<ActionResult<Family>> UpdateFamily([FromBody] Family family)
         {
             try

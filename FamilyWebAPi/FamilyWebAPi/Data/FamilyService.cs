@@ -27,15 +27,17 @@ namespace DNPAssigment1.Data
             else
             {
                 string content = File.ReadAllText(familyFile);
-                families = JsonSerializer.Deserialize <List<Family>>(content);
+                families = JsonSerializer.Deserialize<List<Family>>(content);
             }
-            Family family = new Family();
+
+            /*Family family = new Family();
             family.StreetName = "sdf";
             family.HouseNumber = 12;
             families.Add(family);
             WriteFamiliesToFile();
+            */
         }
-        
+
         public async Task<IList<Family>> GetFamiliesAsync()
         {
             return this.families;
@@ -60,16 +62,26 @@ namespace DNPAssigment1.Data
 
         public async Task<Family> UpdateFamilyAsync(Family family)
         {
-            Family toUpdate = families.First(f => f.Id == family.Id);
-            WriteFamiliesToFile();
-            return toUpdate;
+            for (int i = 0; i < families.Count; i++)
+            {
+                if (families[i].StreetName.Equals(family.StreetName))
+                {
+                    families[i] = family;
+                    return families[i];
+                }
+            }
+            return null;
+            //Family toUpdate = families.First(f => f.Id == family.Id);
+            //WriteFamiliesToFile();
+            //return toUpdate;
         }
-        
+
         private void WriteFamiliesToFile()
         {
             string productAsJson = JsonSerializer.Serialize(families);
-            File.WriteAllText(familyFile,productAsJson);
+            File.WriteAllText(familyFile, productAsJson);
         }
+
         /*
         private void Seed()
         {
