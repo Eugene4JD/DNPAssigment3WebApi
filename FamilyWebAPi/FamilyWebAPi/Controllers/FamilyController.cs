@@ -29,7 +29,7 @@ namespace FamilyWebAPi.Controllers
                 return Ok(families);
             }
             catch (Exception e)
-            {
+            { 
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }
@@ -71,12 +71,11 @@ namespace FamilyWebAPi.Controllers
         [HttpPost]
         public async Task<ActionResult> AddFamily([FromBody] Family family)
         {
-            Console.WriteLine("here");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            
             try
             {
                 Family added = await _familyService.AddFamilyAsync(family);

@@ -21,7 +21,6 @@ namespace DNPAssigment1.Data
             families = new List<Family>();
             if (!File.Exists(familyFile))
             {
-                //Seed();
                 WriteFamiliesToFile();
             }
             else
@@ -29,11 +28,6 @@ namespace DNPAssigment1.Data
                 string content = File.ReadAllText(familyFile);
                 families = JsonSerializer.Deserialize <List<Family>>(content);
             }
-            Family family = new Family();
-            family.StreetName = "sdf";
-            family.HouseNumber = 12;
-            families.Add(family);
-            WriteFamiliesToFile();
         }
         
         public async Task<IList<Family>> GetFamiliesAsync()
@@ -43,7 +37,12 @@ namespace DNPAssigment1.Data
 
         public async Task<Family> AddFamilyAsync(Family family)
         {
-            int max = families.Max(family => family.Id);
+            int max = -1;
+            if (families.Count > 0)
+            {
+                max = families.Max(family => family.Id);
+            }
+            
             Console.WriteLine("Here is ok");
             family.Id = (++max);
             families.Add(family);
@@ -60,9 +59,16 @@ namespace DNPAssigment1.Data
 
         public async Task<Family> UpdateFamilyAsync(Family family)
         {
-            Family toUpdate = families.First(f => f.Id == family.Id);
+            for (int i = 0; i < families.Count; i++)
+            {
+                if (families[i].Id == family.Id)
+                {
+                    families[i] = family;
+                    break;
+                }
+            }
             WriteFamiliesToFile();
-            return toUpdate;
+            return family;
         }
         
         private void WriteFamiliesToFile()
@@ -70,158 +76,5 @@ namespace DNPAssigment1.Data
             string productAsJson = JsonSerializer.Serialize(families);
             File.WriteAllText(familyFile,productAsJson);
         }
-        /*
-        private void Seed()
-        {
-            Family[] fm =
-            {
-                new Family()
-                {
-                    Children = new Child[]
-                    {
-                        new Child()
-                        {
-                            Interests = new ChildInterest[]
-                            {
-                                ChildInterest.Soccer,
-                                ChildInterest.Scout
-                            }.ToList(),
-                            Pets = new Pet[]
-                            {
-                                new Pet()
-                                {
-                                    Age = 3,
-                                    Name = "Chapie",
-                                    Species = PetSpecies.Dog
-                                }
-                            }.ToList(),
-                            FirstName = "Tom",
-                            LastName = "Dean",
-                            EyeColor = EyeColor.Brown,
-                            HairColor = HairColor.Black,
-                            Age = 12,
-                            Height = 140,
-                            Weight = 45,
-                            Id = 1
-
-                        }
-                    }.ToList(),
-
-                    Adults = new Adult[]
-                    {
-                        new Adult()
-                        {
-                            Age = 34,
-                            EyeColor = EyeColor.Black,
-                            FirstName = "Mike",
-                            HairColor = HairColor.Blond,
-                            Height = 170,
-                            Id = 1,
-                            Job = Job.Astronaut.ToString(),
-                            LastName = "Dean",
-                            Weight = 60
-                        },
-                        new Adult()
-                        {
-                            Age = 35,
-                            EyeColor = EyeColor.Blue,
-                            FirstName = "Doraty",
-                            HairColor = HairColor.Blue,
-                            Height = 167,
-                            Id = 2,
-                            Job = Job.Waitress.ToString(),
-                            LastName = "Dean",
-                            Weight = 55
-                        }
-                    }.ToList(),
-
-                    Pets = new Pet[]
-                    {
-                        new Pet()
-                        {
-                            Age = 3,
-                            Name = "Chapie",
-                            Species = PetSpecies.Dog
-                        }
-                    }.ToList(),
-                    //Lastname = "Dean",
-                    Address = "Downing street 5, Boston",
-                    Id = 1
-                },
-            new Family()
-                {
-                    Children = new Child[]
-                    {
-                        new Child()
-                        {
-                            Interests = new ChildInterest[]
-                            {
-                                ChildInterest.Soccer,
-                                ChildInterest.Scout
-                            }.ToList(),
-                            Pets = new Pet[]
-                            {
-                                new Pet()
-                                {
-                                    Age = 3,
-                                    Name = "Braddy",
-                                    Species = PetSpecies.Hamster
-                                }
-                            }.ToList(),
-                            FirstName = "Mike",
-                            LastName = "Green",
-                            EyeColor = EyeColor.Brown,
-                            HairColor = HairColor.Blue,
-                            Age = 17,
-                            Height = 182,
-                            Weight = 75,
-                            Id = 2
-                        }
-                    }.ToList(),
-
-                    Adults = new Adult[]
-                    {
-                        new Adult()
-                        {
-                            Age = 45,
-                            EyeColor = EyeColor.Blue,
-                            FirstName = "Luke",
-                            HairColor = HairColor.Blond,
-                            Height = 185,
-                            Id = 3,
-                            Job = Job.Chef.ToString(),
-                            LastName = "Green",
-                            Weight = 87
-                        },
-                        new Adult()
-                        {
-                            Age = 39,
-                            EyeColor = EyeColor.Amber,
-                            FirstName = "Lucy",
-                            HairColor = HairColor.Grey,
-                            Height = 178,
-                            Id = 4,
-                            Job = Job.Chemist.ToString(),
-                            LastName = "Green",
-                            Weight = 64
-                        }
-                    }.ToList(),
-
-                    Pets = new Pet[]
-                    {
-                        new Pet()
-                        {
-                            Age = 3,
-                            Name = "Braddy",
-                            Species = PetSpecies.Hamster
-                        }
-                    }.ToList(),
-                    //Lastname = "Green",
-                    Address = "Brown street 12, New York",
-                    Id = 2
-                }
-            };
-            families = fm.ToList();
-        }*/
     }
 }
