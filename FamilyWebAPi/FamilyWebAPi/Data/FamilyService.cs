@@ -26,10 +26,10 @@ namespace DNPAssigment1.Data
             else
             {
                 string content = File.ReadAllText(familyFile);
-                families = JsonSerializer.Deserialize <List<Family>>(content);
+                families = JsonSerializer.Deserialize<List<Family>>(content);
             }
         }
-        
+
         public async Task<IList<Family>> GetFamiliesAsync()
         {
             return this.families;
@@ -70,11 +70,11 @@ namespace DNPAssigment1.Data
             WriteFamiliesToFile();
             return family;
         }
-        
+
         private void WriteFamiliesToFile()
         {
             string productAsJson = JsonSerializer.Serialize(families);
-            File.WriteAllText(familyFile,productAsJson);
+            File.WriteAllText(familyFile, productAsJson);
         }
     }
 }
