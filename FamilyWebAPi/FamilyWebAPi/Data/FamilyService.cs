@@ -61,7 +61,7 @@ namespace DNPAssigment1.Data
         {
             for (int i = 0; i < families.Count; i++)
             {
-                if (families[i].Id == family.Id)
+                if (families[i].StreetName.Equals(family.StreetName))
                 {
                     families[i] = family;
                     break;
