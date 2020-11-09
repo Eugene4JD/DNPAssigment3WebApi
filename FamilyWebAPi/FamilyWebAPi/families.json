@@ -1,131 +1,6 @@
 [
   {
     "Id": 0,
-    "streetName": "zzz",
-    "houseNumber": 111,
-    "adults": [
-      {
-        "jobTitle": "FactoryWorker",
-        "id": 123,
-        "firstName": "aaa",
-        "lastName": "aaa",
-        "hairColor": "brown",
-        "eyeColor": "green",
-        "age": 111,
-        "weight": 111,
-        "height": 111,
-        "sex": "Female"
-      }
-    ],
-    "children": null,
-    "pets": null
-  },
-  {
-    "Id": 0,
-    "streetName": "test2",
-    "houseNumber": 2,
-    "adults": [
-      {
-        "jobTitle": "Teacher",
-        "id": 123,
-        "firstName": "adda",
-        "lastName": "adasd",
-        "hairColor": "blond",
-        "eyeColor": "brown",
-        "age": 111,
-        "weight": 111,
-        "height": 111,
-        "sex": "Prefer not to answer"
-      }
-    ],
-    "children": null,
-    "pets": null
-  },
-  {
-    "Id": 0,
-    "streetName": "test3",
-    "houseNumber": 3,
-    "adults": [
-      {
-        "jobTitle": "Engineer",
-        "id": 123456789,
-        "firstName": "Nicolai",
-        "lastName": "Pavliuc",
-        "hairColor": "brown",
-        "eyeColor": "brown",
-        "age": 20,
-        "weight": 77,
-        "height": 180,
-        "sex": "Male"
-      }
-    ],
-    "children": null,
-    "pets": null
-  },
-  {
-    "Id": 0,
-    "streetName": "222",
-    "houseNumber": 222,
-    "adults": [
-      {
-        "jobTitle": "Teacher",
-        "id": 123,
-        "firstName": "nnn",
-        "lastName": "nnn",
-        "hairColor": "blond",
-        "eyeColor": "brown",
-        "age": 111,
-        "weight": 111,
-        "height": 111,
-        "sex": "Prefer not to answer"
-      }
-    ],
-    "children": [
-      {
-        "childInterests": [
-          {
-            "ChildId": 0,
-            "InterestId": "Soccer"
-          }
-        ],
-        "pets": null,
-        "id": 123,
-        "firstName": "aaa",
-        "lastName": "aaa",
-        "hairColor": "blond",
-        "eyeColor": "brown",
-        "age": 111,
-        "weight": 111,
-        "height": 111,
-        "sex": "Prefer not answer"
-      }
-    ],
-    "pets": null
-  },
-  {
-    "Id": 0,
-    "streetName": "new",
-    "houseNumber": 99,
-    "adults": [],
-    "children": [
-      {
-        "childInterests": [],
-        "pets": null,
-        "id": 99,
-        "firstName": "99",
-        "lastName": "99",
-        "hairColor": "blond",
-        "eyeColor": "brown",
-        "age": 99,
-        "weight": 99,
-        "height": 99,
-        "sex": "Prefer not answer"
-      }
-    ],
-    "pets": null
-  },
-  {
-    "Id": 0,
     "streetName": "trtrtr",
     "houseNumber": 22,
     "adults": [
@@ -200,15 +75,15 @@
         "childInterests": [
           {
             "ChildId": 0,
-            "InterestId": "RollerBlades"
+            "InterestId": null
           },
           {
             "ChildId": 0,
-            "InterestId": "RollerBlades"
+            "InterestId": null
           },
           {
             "ChildId": 0,
-            "InterestId": "RollerBlades"
+            "InterestId": null
           }
         ],
         "pets": null,
@@ -223,6 +98,84 @@
         "sex": "Prefer not answer"
       }
     ],
+    "pets": [
+      {
+        "id": 0,
+        "species": "Hamster",
+        "name": "tom",
+        "age": 22
+      }
+    ]
+  },
+  {
+    "Id": 0,
+    "streetName": "globalTest",
+    "houseNumber": 11,
+    "adults": [
+      {
+        "jobTitle": "Teacher",
+        "id": 123,
+        "firstName": "test",
+        "lastName": "test",
+        "hairColor": "blond",
+        "eyeColor": "brown",
+        "age": 123,
+        "weight": 123,
+        "height": 123,
+        "sex": "Prefer not to answer"
+      },
+      {
+        "jobTitle": "Teacher",
+        "id": 111,
+        "firstName": "da",
+        "lastName": "da",
+        "hairColor": "blond",
+        "eyeColor": "brown",
+        "age": 111,
+        "weight": 111,
+        "height": 111,
+        "sex": "Prefer not to answer"
+      }
+    ],
+    "children": [
+      {
+        "childInterests": [
+          {
+            "ChildId": 0,
+            "InterestId": null
+          },
+          {
+            "ChildId": 0,
+            "InterestId": null
+          }
+        ],
+        "pets": null,
+        "id": 123,
+        "firstName": "test",
+        "lastName": "test",
+        "hairColor": "blond",
+        "eyeColor": "brown",
+        "age": 123,
+        "weight": 123,
+        "height": 123,
+        "sex": "Prefer not answer"
+      }
+    ],
+    "pets": [
+      {
+        "id": 0,
+        "species": "Hamster",
+        "name": "test",
+        "age": 22
+      }
+    ]
+  },
+  {
+    "Id": 1,
+    "streetName": "hz",
+    "houseNumber": 88,
+    "adults": [],
+    "children": [],
     "pets": []
   }
 ]
