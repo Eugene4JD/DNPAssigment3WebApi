@@ -10,7 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace FamilyWebAPi
 {
@@ -29,6 +31,17 @@ namespace FamilyWebAPi
             services.AddControllers();
             services.AddSingleton<IFamilyService, FamilyService>();
             services.AddScoped<IUserService, InMemoryUserService>();
+           /* services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new OpenApiInfo()
+                    {
+                        Title = "Family web API",
+                        Description = "Family web api ",
+                        Version = "v1"
+                    });
+            });
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +59,13 @@ namespace FamilyWebAPi
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+           // app.UseSwagger();
+
+            //app.UseSwaggerUI(options =>
+            //{
+           //     options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
+            //});
         }
     }
 }
