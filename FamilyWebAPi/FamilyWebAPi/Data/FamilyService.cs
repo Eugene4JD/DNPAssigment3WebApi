@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using DNPAssigment1.Models;
+using FamilyWebAPi.DataAccess;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Models;
 
@@ -15,9 +16,11 @@ namespace DNPAssigment1.Data
     {
         private string familyFile = "families.json";
         private IList<Family> families;
+        private FamilyDBContext dbContext;
 
-        public FamilyService()
+        public FamilyService(FamilyDBContext familyDbContext)
         {
+            dbContext = familyDbContext;
             families = new List<Family>();
             if (!File.Exists(familyFile))
             {

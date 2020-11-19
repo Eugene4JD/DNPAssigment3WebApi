@@ -31,7 +31,7 @@ namespace FamilyWebAPi.DataAccess
                 .HasOne(childInterest => childInterest.Interest)
                 .WithMany(course => course.ChildInterests)
                 .HasForeignKey(childInterest => childInterest.InterestId);
-            
+
             modelBuilder.Entity<ChildInterest>()
                 .HasOne(childInterest => childInterest.Child)
                 .WithMany(child => child.ChildInterests)

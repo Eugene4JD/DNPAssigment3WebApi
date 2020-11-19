@@ -30,7 +30,7 @@ namespace FamilyWebAPi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IFamilyService, FamilyService>();
+            services.AddScoped<IFamilyService, FamilyService>();
             services.AddScoped<IUserService, InMemoryUserService>();
             services.AddSwaggerGen(options =>
             {
@@ -44,6 +44,7 @@ namespace FamilyWebAPi
             });
 
             services.AddDbContext<FamilyDBContext>();
+            services.AddScoped<IFamilyService, SqliteFamilyService>();
 
         }
 
