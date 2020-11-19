@@ -13,30 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c205489-112a-477c-898e-567111962a98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/FamilyWebAPi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/FamilyWebAPi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="5c205489-112a-477c-898e-567111962a98" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +109,7 @@
       <workItem from="1604922249751" duration="9458000" />
       <workItem from="1604951432049" duration="968000" />
       <workItem from="1605127920112" duration="2684000" />
-      <workItem from="1605800370114" duration="7031000" />
+      <workItem from="1605800370114" duration="7348000" />
     </task>
     <servers />
   </component>
