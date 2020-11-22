@@ -20,6 +20,7 @@
           <e p="InMemoryUserService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="SqliteFamilyService.cs" t="Include" />
+          <e p="SqliteUserService.cs" t="Include" />
         </e>
         <e p="DataAccess" t="Include">
           <e p="FamilyDBContext.cs" t="Include" />
@@ -29,6 +30,9 @@
         <e p="Families.db-shm" t="Include" />
         <e p="Families.db-wal" t="Include" />
         <e p="families.json" t="Include" />
+        <e p="Families2.db" t="Include" />
+        <e p="Families2.db-shm" t="Include" />
+        <e p="Families2.db-wal" t="Include" />
         <e p="FamilyWebAPi.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
           <e p="20201119175645_InitialCreate.cs" t="Include" />
