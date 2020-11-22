@@ -13,8 +13,8 @@ namespace DNPAssigment1.Data
         Task<Family> AddFamilyAsync(Family family);
 
         Task RemoveFamilyAsync(int familyId);
+        Task RemoveFamilyByStreetNameAsync(string streetName);
 
         Task<Family> UpdateFamilyAsync(Family family);
-        
     }
 }

@@ -79,8 +79,8 @@ namespace FamilyWebAPi.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:int}")]
-        public async Task<ActionResult> DeleteFamily([FromRoute] int id)
+        [Route("{streetName}")]
+        public async Task<ActionResult> DeleteFamily([FromRoute] string streetName)
         {
             if (!ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace FamilyWebAPi.Controllers
             
             try
             {
-                await _familyService.RemoveFamilyAsync(id);
+                await _familyService.RemoveFamilyByStreetNameAsync(streetName);
                 return Ok();
             }
             catch (Exception e)

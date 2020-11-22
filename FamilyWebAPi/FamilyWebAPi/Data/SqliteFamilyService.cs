@@ -32,8 +32,21 @@ namespace DNPAssigment1.Data
 
         public async Task RemoveFamilyAsync(int familyId)
         {
+            Console.WriteLine(familyId);
             IList<Family> families = await GetFamiliesAsync();
             Family toRemove = families.First(f => f.Id == familyId);
+            if (toRemove != null)
+            {
+                ctx.Families.Remove(toRemove);
+                await ctx.SaveChangesAsync();
+            }
+        }
+
+        public async Task RemoveFamilyByStreetNameAsync(string streetName)
+        {
+            Console.WriteLine(streetName);
+            IList<Family> families = await GetFamiliesAsync();
+            Family toRemove = families.First(f => f.StreetName.Equals(streetName));
             if (toRemove != null)
             {
                 ctx.Families.Remove(toRemove);
