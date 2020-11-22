@@ -30,8 +30,8 @@ namespace FamilyWebAPi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IFamilyService, FamilyService>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            //services.AddScoped<IFamilyService, FamilyService>();
+            //services.AddScoped<IUserService, InMemoryUserService>();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1",
@@ -45,7 +45,7 @@ namespace FamilyWebAPi
 
             services.AddDbContext<FamilyDBContext>();
             services.AddScoped<IFamilyService, SqliteFamilyService>();
-
+            services.AddScoped<IUserService, SqliteUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,10 +66,7 @@ namespace FamilyWebAPi
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
-            });
+            app.UseSwaggerUI(options => { options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API"); });
         }
     }
 }
