@@ -23,6 +23,7 @@
         </e>
         <e p="DataAccess" t="Include">
           <e p="FamilyDBContext.cs" t="Include" />
+          <e p="FamilyDBContextV2.cs" t="Include" />
         </e>
         <e p="Families.db" t="Include" />
         <e p="Families.db-shm" t="Include" />

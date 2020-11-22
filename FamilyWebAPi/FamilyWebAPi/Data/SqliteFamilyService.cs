@@ -58,25 +58,17 @@ namespace DNPAssigment1.Data
         {
             try
             {
-                IList<Family> families = await GetFamiliesAsync();
-                for (int i = 0; i < families.Count; i++)
-                {
-                    if (families[i].StreetName.Equals(family.StreetName))
-                    {
-                        families[i] = family;
-                        ctx.Update(families[i]);
-                        await ctx.SaveChangesAsync();
-                        return family;
-                    }
-                }
+                //ctx.Update(family);
+                await RemoveFamilyByStreetNameAsync(family.StreetName);
+                await AddFamilyAsync(family);
+                //await ctx.SaveChangesAsync();
+                return family;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 throw;
             }
-
-            return null;
         }
     }
 }
