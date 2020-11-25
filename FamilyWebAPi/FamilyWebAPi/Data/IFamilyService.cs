@@ -12,9 +12,8 @@ namespace DNPAssigment1.Data
 
         Task<Family> AddFamilyAsync(Family family);
 
-        Task RemoveFamilyAsync(int familyId);
-        Task RemoveFamilyByStreetNameAsync(string streetName);
-
+        Task RemoveFamilyAsync(string streetName, int housenumber);
+        
         Task<Family> UpdateFamilyAsync(Family family);
     }
 }

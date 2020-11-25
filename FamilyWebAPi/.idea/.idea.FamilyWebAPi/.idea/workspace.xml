@@ -14,11 +14,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c205489-112a-477c-898e-567111962a98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyWebAPi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Controllers/FamilyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Controllers/FamilyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Data/FamilyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Data/FamilyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Data/IFamilyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Data/IFamilyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Data/SqliteFamilyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Data/SqliteFamilyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContextV2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families2.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families2.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Families2.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/FamilyWebAPi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/FamilyWebAPi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Migrations/20201119175645_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Migrations/20201119175645_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Migrations/FamilyDBContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyWebAPi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/bin/Debug/netcoreapp3.1/FamilyWebAPi.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/Debug/netcoreapp3.1/FamilyWebAPi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/FamilyWebAPi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyWebAPi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyWebAPi/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +73,17 @@
         <option value="$PROJECT_DIR$/FamilyWebAPi/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Models/Pet.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Models/Person.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Models/User.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContext.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/IFamilyService.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/FamilyService.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/Controllers/FamilyController.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/SqliteFamilyService.cs" />
-        <option value="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContextV2.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Data/SqliteUserService.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContextV2.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/DataAccess/FamilyDBContext.cs" />
         <option value="$PROJECT_DIR$/FamilyWebAPi/Startup.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Migrations/20201125001948_IntialCreate.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/FamilyService.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Models/Family.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Controllers/FamilyController.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/IFamilyService.cs" />
+        <option value="$PROJECT_DIR$/FamilyWebAPi/Data/SqliteFamilyService.cs" />
       </list>
     </option>
   </component>
@@ -121,6 +154,8 @@
       <workItem from="1605800370114" duration="7348000" />
       <workItem from="1605809351738" duration="2172000" />
       <workItem from="1606048734172" duration="6997000" />
+      <workItem from="1606231088233" duration="3675000" />
+      <workItem from="1606262502682" duration="6757000" />
     </task>
     <servers />
   </component>
@@ -145,34 +180,36 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605808899208">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="481" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606269319124">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605808899208" />
-    <state x="509" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606056795840">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="481" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606269319124" />
+    <state x="679" y="289" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606267526003">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="509" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606056795840" />
-    <state width="1493" height="164" key="GridCell.Tab.0.bottom" timestamp="1606061846201">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="679" y="289" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1606267526003" />
+    <state width="2005" height="183" key="GridCell.Tab.0.bottom" timestamp="1606269090330">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606061846201" />
-    <state width="2005" height="75" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1605132255778" />
-    <state width="1493" height="164" key="GridCell.Tab.0.center" timestamp="1606061846201">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2005" height="183" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1606269090330" />
+    <state width="2005" height="183" key="GridCell.Tab.0.center" timestamp="1606269090330">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606061846201" />
-    <state width="2005" height="75" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1605132255778" />
-    <state width="1493" height="164" key="GridCell.Tab.0.left" timestamp="1606061846201">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2005" height="183" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1606269090330" />
+    <state width="2005" height="183" key="GridCell.Tab.0.left" timestamp="1606269090329">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606061846201" />
-    <state width="2005" height="75" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1605132255778" />
-    <state width="1493" height="164" key="GridCell.Tab.0.right" timestamp="1606061846201">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2005" height="183" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1606269090329" />
+    <state width="2005" height="183" key="GridCell.Tab.0.right" timestamp="1606269090330">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606061846201" />
-    <state width="2005" height="75" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1605132255778" />
+    <state width="2005" height="183" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1606269090330" />
     <state x="574" y="102" key="RiderGenerateDialog" timestamp="1605809602753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

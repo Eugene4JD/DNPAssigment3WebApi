@@ -45,7 +45,7 @@ namespace FamilyWebAPi
 
             services.AddDbContext<FamilyDBContext>();
             services.AddScoped<IFamilyService, SqliteFamilyService>();
-            services.AddScoped<IUserService, SqliteUserService>();
+            services.AddScoped<IUserService, InMemoryUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

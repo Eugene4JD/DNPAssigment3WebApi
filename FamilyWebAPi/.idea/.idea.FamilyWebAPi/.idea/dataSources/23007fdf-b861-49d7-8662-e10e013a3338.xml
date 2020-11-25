@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Families.db">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.19">
+    <root id="1">
+      <ServerVersion>3.31.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="Adult"/>
+    <table id="7" parent="2" name="Child"/>
+    <table id="8" parent="2" name="ChildInterest"/>
+    <table id="9" parent="2" name="Families"/>
+    <table id="10" parent="2" name="Interest"/>
+    <table id="11" parent="2" name="Pet"/>
+    <table id="12" parent="2" name="Users"/>
+    <table id="13" parent="2" name="__EFMigrationsHistory"/>
+    <table id="14" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="15" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="16" parent="6" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="17" parent="6" name="JobTitle">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="18" parent="6" name="FamilyHouseNumber">
+      <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="19" parent="6" name="FamilyStreetName">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="20" parent="6" name="FirstName">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="21" parent="6" name="LastName">
+      <Position>6</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="22" parent="6" name="HairColor">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="23" parent="6" name="EyeColor">
+      <Position>8</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="24" parent="6" name="Age">
+      <Position>9</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="6" name="Weight">
+      <Position>10</Position>
+      <DataType>REAL|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="6" name="Height">
+      <Position>11</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="6" name="Sex">
+      <Position>12</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <index id="28" parent="6" name="IX_Adult_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="29" parent="6" name="PK_Adult">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="6" name="FK_Adult_Families_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <RefTableName>Families</RefTableName>
+      <RefKeyName>PK_Families</RefKeyName>
+      <RefColNames>StreetName
+HouseNumber</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="31" parent="7" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="32" parent="7" name="FamilyHouseNumber">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="33" parent="7" name="FamilyStreetName">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="34" parent="7" name="FirstName">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="35" parent="7" name="LastName">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="36" parent="7" name="HairColor">
+      <Position>6</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="37" parent="7" name="EyeColor">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="38" parent="7" name="Age">
+      <Position>8</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="7" name="Weight">
+      <Position>9</Position>
+      <DataType>REAL|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="7" name="Height">
+      <Position>10</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="7" name="Sex">
+      <Position>11</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <index id="42" parent="7" name="IX_Child_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="43" parent="7" name="PK_Child">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="7" name="FK_Child_Families_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <RefTableName>Families</RefTableName>
+      <RefKeyName>PK_Families</RefKeyName>
+      <RefColNames>StreetName
+HouseNumber</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="45" parent="8" name="ChildId">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="8" name="InterestId">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="47" parent="8" name="sqlite_autoindex_ChildInterest_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ChildId
+InterestId</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="48" parent="8" name="IX_ChildInterest_InterestId">
+      <ColNames>InterestId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="49" parent="8" name="PK_ChildInterest">
+      <ColNames>ChildId
+InterestId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_ChildInterest_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="50" parent="8" name="FK_ChildInterest_Child_ChildId">
+      <ColNames>ChildId</ColNames>
+      <RefTableName>Child</RefTableName>
+      <RefKeyName>PK_Child</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="51" parent="8" name="FK_ChildInterest_Interest_InterestId">
+      <ColNames>InterestId</ColNames>
+      <RefTableName>Interest</RefTableName>
+      <RefKeyName>PK_Interest</RefKeyName>
+      <RefColNames>Type</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="52" parent="9" name="StreetName">
+      <Position>1</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="9" name="HouseNumber">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="54" parent="9" name="sqlite_autoindex_Families_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>StreetName
+HouseNumber</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="9" name="PK_Families">
+      <ColNames>StreetName
+HouseNumber</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Families_1</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="10" name="Type">
+      <Position>1</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="57" parent="10" name="sqlite_autoindex_Interest_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Type</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="10" name="PK_Interest">
+      <ColNames>Type</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Interest_1</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="11" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="60" parent="11" name="Species">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="11" name="Name">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="11" name="Age">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="11" name="ChildId">
+      <Position>5</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="64" parent="11" name="FamilyHouseNumber">
+      <Position>6</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="65" parent="11" name="FamilyStreetName">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <index id="66" parent="11" name="IX_Pet_ChildId">
+      <ColNames>ChildId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="67" parent="11" name="IX_Pet_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="68" parent="11" name="PK_Pet">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="69" parent="11" name="FK_Pet_Child_ChildId">
+      <ColNames>ChildId</ColNames>
+      <RefTableName>Child</RefTableName>
+      <RefKeyName>PK_Child</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="70" parent="11" name="FK_Pet_Families_FamilyStreetName_FamilyHouseNumber">
+      <ColNames>FamilyStreetName
+FamilyHouseNumber</ColNames>
+      <RefTableName>Families</RefTableName>
+      <RefKeyName>PK_Families</RefKeyName>
+      <RefColNames>StreetName
+HouseNumber</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="71" parent="12" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="72" parent="12" name="UserName">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="73" parent="12" name="Password">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="74" parent="12" name="SecurityLevel">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="12" name="Role">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="76" parent="12" name="PK_Users">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="13" name="MigrationId">
+      <Position>1</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="13" name="ProductVersion">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="79" parent="13" name="sqlite_autoindex___EFMigrationsHistory_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MigrationId</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="13" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
+    </key>
+    <column id="81" parent="14" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="82" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="83" parent="14" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="84" parent="14" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="85" parent="14" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="86" parent="15" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="87" parent="15" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>

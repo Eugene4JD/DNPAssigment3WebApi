@@ -2,7 +2,7 @@
 
 namespace FamilyWebAPi.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class IntialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,14 +10,12 @@ namespace FamilyWebAPi.Migrations
                 name: "Families",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     StreetName = table.Column<string>(type: "TEXT", nullable: false),
                     HouseNumber = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Families", x => x.Id);
+                    table.PrimaryKey("PK_Families", x => new { x.StreetName, x.HouseNumber });
                 });
 
             migrationBuilder.CreateTable(
@@ -54,7 +52,8 @@ namespace FamilyWebAPi.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     JobTitle = table.Column<string>(type: "TEXT", nullable: true),
-                    FamilyId = table.Column<int>(type: "INTEGER", nullable: true),
+                    FamilyHouseNumber = table.Column<int>(type: "INTEGER", nullable: true),
+                    FamilyStreetName = table.Column<string>(type: "TEXT", nullable: true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
                     HairColor = table.Column<string>(type: "TEXT", nullable: true),
@@ -68,10 +67,10 @@ namespace FamilyWebAPi.Migrations
                 {
                     table.PrimaryKey("PK_Adult", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Adult_Families_FamilyId",
-                        column: x => x.FamilyId,
+                        name: "FK_Adult_Families_FamilyStreetName_FamilyHouseNumber",
+                        columns: x => new { x.FamilyStreetName, x.FamilyHouseNumber },
                         principalTable: "Families",
-                        principalColumn: "Id",
+                        principalColumns: new[] { "StreetName", "HouseNumber" },
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -81,7 +80,8 @@ namespace FamilyWebAPi.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    FamilyId = table.Column<int>(type: "INTEGER", nullable: true),
+                    FamilyHouseNumber = table.Column<int>(type: "INTEGER", nullable: true),
+                    FamilyStreetName = table.Column<string>(type: "TEXT", nullable: true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
                     HairColor = table.Column<string>(type: "TEXT", nullable: true),
@@ -95,10 +95,10 @@ namespace FamilyWebAPi.Migrations
                 {
                     table.PrimaryKey("PK_Child", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Child_Families_FamilyId",
-                        column: x => x.FamilyId,
+                        name: "FK_Child_Families_FamilyStreetName_FamilyHouseNumber",
+                        columns: x => new { x.FamilyStreetName, x.FamilyHouseNumber },
                         principalTable: "Families",
-                        principalColumn: "Id",
+                        principalColumns: new[] { "StreetName", "HouseNumber" },
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -111,7 +111,7 @@ namespace FamilyWebAPi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChildInterest", x => new { x.InterestId, x.ChildId });
+                    table.PrimaryKey("PK_ChildInterest", x => new { x.ChildId, x.InterestId });
                     table.ForeignKey(
                         name: "FK_ChildInterest_Child_ChildId",
                         column: x => x.ChildId,
@@ -136,7 +136,8 @@ namespace FamilyWebAPi.Migrations
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
                     ChildId = table.Column<int>(type: "INTEGER", nullable: true),
-                    FamilyId = table.Column<int>(type: "INTEGER", nullable: true)
+                    FamilyHouseNumber = table.Column<int>(type: "INTEGER", nullable: true),
+                    FamilyStreetName = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -148,27 +149,27 @@ namespace FamilyWebAPi.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Pet_Families_FamilyId",
-                        column: x => x.FamilyId,
+                        name: "FK_Pet_Families_FamilyStreetName_FamilyHouseNumber",
+                        columns: x => new { x.FamilyStreetName, x.FamilyHouseNumber },
                         principalTable: "Families",
-                        principalColumn: "Id",
+                        principalColumns: new[] { "StreetName", "HouseNumber" },
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Adult_FamilyId",
+                name: "IX_Adult_FamilyStreetName_FamilyHouseNumber",
                 table: "Adult",
-                column: "FamilyId");
+                columns: new[] { "FamilyStreetName", "FamilyHouseNumber" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Child_FamilyId",
+                name: "IX_Child_FamilyStreetName_FamilyHouseNumber",
                 table: "Child",
-                column: "FamilyId");
+                columns: new[] { "FamilyStreetName", "FamilyHouseNumber" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChildInterest_ChildId",
+                name: "IX_ChildInterest_InterestId",
                 table: "ChildInterest",
-                column: "ChildId");
+                column: "InterestId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pet_ChildId",
@@ -176,9 +177,9 @@ namespace FamilyWebAPi.Migrations
                 column: "ChildId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pet_FamilyId",
+                name: "IX_Pet_FamilyStreetName_FamilyHouseNumber",
                 table: "Pet",
-                column: "FamilyId");
+                columns: new[] { "FamilyStreetName", "FamilyHouseNumber" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -35,27 +35,19 @@ namespace DNPAssigment1.Data
 
         public async Task<IList<Family>> GetFamiliesAsync()
         {
-            return this.families;
+            return this.families.ToList();
         }
 
         public async Task<Family> AddFamilyAsync(Family family)
         {
-            int max = -1;
-            if (families.Count > 0)
-            {
-                max = families.Max(family => family.Id);
-            }
-            
-            Console.WriteLine("Here is ok");
-            family.Id = (++max);
             families.Add(family);
             WriteFamiliesToFile();
             return family;
         }
 
-        public async Task RemoveFamilyAsync(int familyId)
+        public async Task RemoveFamilyAsync(String streetName, int houseNumber)
         {
-            Family toRemove = families.First(f => f.Id == familyId);
+            Family toRemove = families.First(f => f.StreetName.Equals(streetName) && f.HouseNumber == houseNumber);
             families.Remove(toRemove);
             WriteFamiliesToFile();
         }

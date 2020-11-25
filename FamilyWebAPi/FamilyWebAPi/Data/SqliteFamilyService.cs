@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,9 +21,11 @@ namespace DNPAssigment1.Data
 
         public async Task<IList<Family>> GetFamiliesAsync()
         {
-            return await ctx.Families.ToListAsync();
+            var families = await ctx.Families.ToListAsync();
+            return families;
         }
 
+       
         public async Task<Family> AddFamilyAsync(Family family)
         {
             EntityEntry<Family> newlyAdded = await ctx.Families.AddAsync(family);
@@ -30,38 +33,24 @@ namespace DNPAssigment1.Data
             return newlyAdded.Entity;
         }
 
-        public async Task RemoveFamilyAsync(int familyId)
+        public async Task RemoveFamilyAsync(string streetName, int houseNumber)
         {
-            Console.WriteLine(familyId);
-            IList<Family> families = await GetFamiliesAsync();
-            Family toRemove = families.First(f => f.Id == familyId);
+            var families = await ctx.Families.ToListAsync();
+            Family toRemove = families.First(f => f.StreetName.Equals(streetName) && f.HouseNumber == houseNumber);
             if (toRemove != null)
             {
                 ctx.Families.Remove(toRemove);
                 await ctx.SaveChangesAsync();
             }
         }
-
-        public async Task RemoveFamilyByStreetNameAsync(string streetName)
-        {
-            Console.WriteLine(streetName);
-            IList<Family> families = await GetFamiliesAsync();
-            Family toRemove = families.First(f => f.StreetName.Equals(streetName));
-            if (toRemove != null)
-            {
-                ctx.Families.Remove(toRemove);
-                await ctx.SaveChangesAsync();
-            }
-        }
-
         public async Task<Family> UpdateFamilyAsync(Family family)
         {
             try
             {
-                //ctx.Update(family);
-                await RemoveFamilyByStreetNameAsync(family.StreetName);
-                await AddFamilyAsync(family);
-                //await ctx.SaveChangesAsync();
+                ctx.Update(family);
+                //await RemoveFamilyByStreetNameAsync(family.StreetName);
+                //await AddFamilyAsync(family);
+                await ctx.SaveChangesAsync();
                 return family;
             }
             catch (Exception e)

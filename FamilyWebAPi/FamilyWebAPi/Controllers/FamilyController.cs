@@ -27,7 +27,7 @@ namespace FamilyWebAPi.Controllers
             //Console.WriteLine("http get ");
             try
             {
-                IList<Family> families = await _familyService.GetFamiliesAsync();
+                var families = await _familyService.GetFamiliesAsync();
                 return Ok(families);
             }
             catch (Exception e)
@@ -50,7 +50,7 @@ namespace FamilyWebAPi.Controllers
             try
             {
                 Family added = await _familyService.AddFamilyAsync(family);
-                return Created($"/{added.Id}", added);
+                return Ok(added);
                 // return newly added to-do, to get the auto generated id
             }
             catch (Exception e)
@@ -79,8 +79,7 @@ namespace FamilyWebAPi.Controllers
         }
 
         [HttpDelete]
-        [Route("{streetName}")]
-        public async Task<ActionResult> DeleteFamily([FromRoute] string streetName)
+        public async Task<ActionResult> DeleteFamily([FromQuery] string streetName,[FromQuery] int houseNumber)
         {
             if (!ModelState.IsValid)
             {
@@ -89,7 +88,7 @@ namespace FamilyWebAPi.Controllers
             
             try
             {
-                await _familyService.RemoveFamilyByStreetNameAsync(streetName);
+                await _familyService.RemoveFamilyAsync(streetName,houseNumber);
                 return Ok();
             }
             catch (Exception e)

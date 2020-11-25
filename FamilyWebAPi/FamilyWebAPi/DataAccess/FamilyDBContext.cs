@@ -4,38 +4,37 @@ using Models;
 
 namespace FamilyWebAPi.DataAccess
 {
-    public class FamilyDBContext : DbContext
+    public class FamilyDBContext: DbContext
     {
+        // Defining various tables
         public DbSet<Family> Families { get; set; }
         public DbSet<User> Users { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // name of database: Family.db    -- .db may not be needed..?
             optionsBuilder.UseSqlite("Data Source = Families.db");
-            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.EnableSensitiveDataLogging();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<ChildInterest>()
-                .HasKey(sc =>
-                    new
-                    {
-                        sc.InterestId,
-                        sc.ChildId
-                    }
-                );
-            modelBuilder.Entity<ChildInterest>()
-                .HasOne(childInterest => childInterest.Interest)
-                .WithMany(course => course.ChildInterests)
-                .HasForeignKey(childInterest => childInterest.InterestId);
+                .HasKey(ci => new {ci.ChildId, ci.InterestId});
+
+            modelBuilder.Entity<Family>()
+                .HasKey(fam => new {fam.StreetName, fam.HouseNumber});
 
             modelBuilder.Entity<ChildInterest>()
-                .HasOne(childInterest => childInterest.Child)
+                .HasOne(ci => ci.Child)
                 .WithMany(child => child.ChildInterests)
-                .HasForeignKey(childInterest => childInterest.ChildId);
+                .HasForeignKey(ci => ci.ChildId);
+
+            modelBuilder.Entity<ChildInterest>()
+                .HasOne(ci => ci.Interest)
+                .WithMany(i => i.ChildInterests)
+                .HasForeignKey(ci => ci.InterestId);
         }
     }
 }

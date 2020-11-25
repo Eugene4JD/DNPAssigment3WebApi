@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FamilyWebAPi.Migrations
 {
     [DbContext(typeof(FamilyDBContext))]
-    [Migration("20201119175645_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201125015308_IntialCreate")]
+    partial class IntialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,8 +53,11 @@ namespace FamilyWebAPi.Migrations
                     b.Property<string>("EyeColor")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("FamilyId")
+                    b.Property<int?>("FamilyHouseNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("FamilyStreetName")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
@@ -79,7 +82,7 @@ namespace FamilyWebAPi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FamilyId");
+                    b.HasIndex("FamilyStreetName", "FamilyHouseNumber");
 
                     b.ToTable("Adult");
                 });
@@ -96,8 +99,11 @@ namespace FamilyWebAPi.Migrations
                     b.Property<string>("EyeColor")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("FamilyId")
+                    b.Property<int?>("FamilyHouseNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("FamilyStreetName")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
@@ -119,40 +125,35 @@ namespace FamilyWebAPi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FamilyId");
+                    b.HasIndex("FamilyStreetName", "FamilyHouseNumber");
 
                     b.ToTable("Child");
                 });
 
             modelBuilder.Entity("Models.ChildInterest", b =>
                 {
-                    b.Property<string>("InterestId")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("ChildId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("InterestId", "ChildId");
+                    b.Property<string>("InterestId")
+                        .HasColumnType("TEXT");
 
-                    b.HasIndex("ChildId");
+                    b.HasKey("ChildId", "InterestId");
+
+                    b.HasIndex("InterestId");
 
                     b.ToTable("ChildInterest");
                 });
 
             modelBuilder.Entity("Models.Family", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("StreetName")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("HouseNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("StreetName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
+                    b.HasKey("StreetName", "HouseNumber");
 
                     b.ToTable("Families");
                 });
@@ -179,8 +180,11 @@ namespace FamilyWebAPi.Migrations
                     b.Property<int?>("ChildId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("FamilyId")
+                    b.Property<int?>("FamilyHouseNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("FamilyStreetName")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -194,7 +198,7 @@ namespace FamilyWebAPi.Migrations
 
                     b.HasIndex("ChildId");
 
-                    b.HasIndex("FamilyId");
+                    b.HasIndex("FamilyStreetName", "FamilyHouseNumber");
 
                     b.ToTable("Pet");
                 });
@@ -203,14 +207,14 @@ namespace FamilyWebAPi.Migrations
                 {
                     b.HasOne("Models.Family", null)
                         .WithMany("Adults")
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyStreetName", "FamilyHouseNumber");
                 });
 
             modelBuilder.Entity("Models.Child", b =>
                 {
                     b.HasOne("Models.Family", null)
                         .WithMany("Children")
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyStreetName", "FamilyHouseNumber");
                 });
 
             modelBuilder.Entity("Models.ChildInterest", b =>
@@ -240,7 +244,7 @@ namespace FamilyWebAPi.Migrations
 
                     b.HasOne("Models.Family", null)
                         .WithMany("Pets")
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyStreetName", "FamilyHouseNumber");
                 });
 
             modelBuilder.Entity("Models.Child", b =>
