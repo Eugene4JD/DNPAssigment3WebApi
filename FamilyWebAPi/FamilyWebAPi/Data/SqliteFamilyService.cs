@@ -22,6 +22,13 @@ namespace DNPAssigment1.Data
         public async Task<IList<Family>> GetFamiliesAsync()
         {
             var families = await ctx.Families.ToListAsync();
+            foreach (var family in families)
+            {
+                ctx.Entry(family).Collection(m => m.Adults).Load();
+                ctx.Entry(family).Collection(m => m.Children).Load();
+                ctx.Entry(family).Collection(m => m.Pets).Load();
+            }
+
             return families;
         }
 

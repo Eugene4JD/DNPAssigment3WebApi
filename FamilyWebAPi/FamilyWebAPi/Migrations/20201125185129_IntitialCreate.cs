@@ -2,7 +2,7 @@
 
 namespace FamilyWebAPi.Migrations
 {
-    public partial class IntialCreate : Migration
+    public partial class IntitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

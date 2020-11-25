@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FamilyWebAPi.Migrations
 {
     [DbContext(typeof(FamilyDBContext))]
-    [Migration("20201125015308_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20201125185129_IntitialCreate")]
+    partial class IntitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

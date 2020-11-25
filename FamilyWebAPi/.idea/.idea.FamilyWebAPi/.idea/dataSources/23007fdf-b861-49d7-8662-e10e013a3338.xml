@@ -34,13 +34,15 @@
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="18" parent="6" name="FamilyHouseNumber">
+    <column id="18" parent="6" name="FamilyStreetName">
       <Position>3</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <column id="19" parent="6" name="FamilyStreetName">
-      <Position>4</Position>
       <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="6" name="FamilyHouseNumber">
+      <Position>4</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="20" parent="6" name="FirstName">
       <Position>5</Position>
@@ -93,7 +95,7 @@ FamilyHouseNumber</ColNames>
       <RefKeyName>PK_Families</RefKeyName>
       <RefColNames>StreetName
 HouseNumber</RefColNames>
-      <OnDelete>restrict</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="31" parent="7" name="Id">
       <Position>1</Position>

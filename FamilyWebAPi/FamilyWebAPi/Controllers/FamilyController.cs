@@ -36,7 +36,7 @@ namespace FamilyWebAPi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-
+        
         [HttpPost]
         public async Task<ActionResult> AddFamily([FromBody] Family family)
         {

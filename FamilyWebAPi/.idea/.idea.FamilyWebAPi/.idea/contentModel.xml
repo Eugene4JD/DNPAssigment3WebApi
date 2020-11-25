@@ -29,8 +29,8 @@
         <e p="families.json" t="Include" />
         <e p="FamilyWebAPi.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20201125015308_IntialCreate.cs" t="Include" />
-          <e p="20201125015308_IntialCreate.Designer.cs" t="Include" />
+          <e p="20201125185129_IntitialCreate.cs" t="Include" />
+          <e p="20201125185129_IntitialCreate.Designer.cs" t="Include" />
           <e p="FamilyDBContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
