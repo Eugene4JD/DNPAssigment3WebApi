@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DNPAssigment1.Models;
 using FamilyWebAPi.DataAccess;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace DNPAssigment1.Data
 {
@@ -31,6 +32,13 @@ namespace DNPAssigment1.Data
             }
 
             return first;
+        }
+
+        public async Task<User> AddUserAsync(User user)
+        {
+            EntityEntry<User> newlyAdded = await ctx.Users.AddAsync(user);
+            await ctx.SaveChangesAsync();
+            return newlyAdded.Entity;
         }
     }
 }

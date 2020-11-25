@@ -24,7 +24,6 @@ namespace FamilyWebAPi.Controllers
         [HttpGet]
         public async Task<ActionResult<IList<Family>>> GetFamilies()
         {
-            //Console.WriteLine("http get ");
             try
             {
                 var families = await _familyService.GetFamiliesAsync();
@@ -40,22 +39,17 @@ namespace FamilyWebAPi.Controllers
         [HttpPost]
         public async Task<ActionResult> AddFamily([FromBody] Family family)
         {
-            Console.WriteLine("here");
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("**********8invalid family");
                 return BadRequest(ModelState);
             }
-
             try
             {
                 Family added = await _familyService.AddFamilyAsync(family);
                 return Ok(added);
-                // return newly added to-do, to get the auto generated id
             }
             catch (Exception e)
             {
-                Console.WriteLine("exeption sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
                 Console.WriteLine(e);
                 return StatusCode(500, e.Message);
             }

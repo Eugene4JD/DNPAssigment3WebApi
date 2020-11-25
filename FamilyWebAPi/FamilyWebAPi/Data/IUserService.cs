@@ -6,5 +6,6 @@ using DNPAssigment1.Models;
     public interface IUserService
     {
         Task<User> ValidateUserAsync(string userName, string password);
+        Task<User> AddUserAsync(User user);
     }
 }

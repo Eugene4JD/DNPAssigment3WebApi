@@ -32,5 +32,20 @@ namespace FamilyWebAPi.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
+        [HttpPost]
+        public async Task<ActionResult> AddUser([FromBody] User user)
+        {
+            try
+            {
+                var newUser = await _userService.AddUserAsync(user);
+                return Ok(newUser);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
     }
 }

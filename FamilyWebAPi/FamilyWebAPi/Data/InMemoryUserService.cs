@@ -48,5 +48,10 @@ namespace DNPAssigment1.Data
 
             return first;
         }
+
+        public Task<User> AddUserAsync(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
