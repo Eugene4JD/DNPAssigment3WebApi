@@ -60,7 +60,6 @@ namespace FamilyWebAPi.Controllers
         {
             try
             {
-                Console.WriteLine(family);
                 Family updatedFamily = await _familyService.UpdateFamilyAsync(family);
                 return Ok(updatedFamily);
             }
