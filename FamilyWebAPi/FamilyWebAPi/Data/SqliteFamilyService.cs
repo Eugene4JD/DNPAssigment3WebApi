@@ -27,6 +27,10 @@ namespace DNPAssigment1.Data
                 ctx.Entry(family).Collection(m => m.Adults).Load();
                 ctx.Entry(family).Collection(m => m.Children).Load();
                 ctx.Entry(family).Collection(m => m.Pets).Load();
+                foreach (var child in family.Children)
+                {
+                    ctx.Entry(child).Collection(m=>m.ChildInterests).Load();
+                }
             }
 
             return families;
@@ -55,8 +59,6 @@ namespace DNPAssigment1.Data
             try
             {
                 ctx.Update(family);
-                //await RemoveFamilyByStreetNameAsync(family.StreetName);
-                //await AddFamilyAsync(family);
                 await ctx.SaveChangesAsync();
                 return family;
             }

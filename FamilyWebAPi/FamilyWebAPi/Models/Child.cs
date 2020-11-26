@@ -16,5 +16,10 @@ namespace Models {
             Pets = toUpdate.Pets;
         }
 
+        public Child()
+        {
+            this.ChildInterests = new List<ChildInterest>();
+        }
+
     }
 }

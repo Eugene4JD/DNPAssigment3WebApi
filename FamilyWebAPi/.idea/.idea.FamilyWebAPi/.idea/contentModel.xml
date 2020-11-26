@@ -26,8 +26,6 @@
           <e p="FamilyDBContext.cs" t="Include" />
         </e>
         <e p="Families.db" t="Include" />
-        <e p="Families.db-shm" t="Include" />
-        <e p="Families.db-wal" t="Include" />
         <e p="families.json" t="Include" />
         <e p="FamilyWebAPi.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
